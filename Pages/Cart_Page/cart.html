@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        #parent_heading {
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+            align-items: center;
+            background-color: tomato;
+            margin-bottom: 15px;
+        }
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+            margin-right: 15px;
+        }
+        #parent {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 30px;
+            margin: 10px 12px;
+        }
+        #box {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            border-radius: 20px;
+            height: max-content;
+        }
+        
+        #itembox {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 20px;
+            margin: 20px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        /* #itembox1 {
+            height: 200px;
+            width: 350px;
+        } */
+        #itembox1 > img {
+            width: 150px;
+            height: 150px;
+            margin: 8px 4px;
+           
+        }
+        h1,h4 {
+            text-align: center;
+        }
+        h1 {
+            color: white;  
+        }
+        #btnstyle1 {
+            cursor: pointer;
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        #btnstyle2 {
+            cursor: pointer;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+
+        #itembox3 {
+            display: flex;
+            align-items: center;
+        }
+
+        #paymentBox {
+            border: 1px solid black;
+            height: max-content;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            justify-self: center;
+
+        }
+        #cartheading {
+            background-color: tomato;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        #line {
+            border: 2px solid black;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        #paybtn, #applybtn {
+            border: none;
+            border-radius: 25px;
+            overflow: hidden;
+            font-size: 20px;
+            background-color: #457eff;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            justify-content: center;
+
+       }
+       
+    #paybtn {
+        background-color: rgb(175, 16, 109);
+        margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+        margin-right: 8px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 16px;
+        overflow: hidden;
+        outline: none;
+        font-size: 16px;
+      }
+    details > summary {
+        padding: 4px;
+        width: max-content;
+        background-color: #eeeeee;
+        border: none;
+        box-shadow: 1px 1px 2px #bbbbbb;
+        cursor: pointer;
+        margin-left: 8px;
+        margin-top: 8px;
+        }
+
+    details > p {
+        background-color: #eeeeee;
+        padding: 4px;
+        margin: 0;
+        box-shadow: 1px 1px 2px #bbbbbb;
+        }
+
+        b {
+            font-size: 20px;
+        }
+
+        /* media queries for small screen
+        @media screen and (min-width: 400px) and (max-width: 799px){
+            #parent {
+                grid-template-columns: repeat(1,1fr);
+            }            
+        } */
+
+        @media screen and (min-width: 0px) and (max-width: 650px){
+            #parent {
+                grid-template-columns: repeat(1,1fr);
+            }
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="parent_heading">
+        <a href="../Mens_page/mens.html">Home</a>
+        <a href="./cart.html">Cart Page</a>
+    </div>
+    <div id="parent">
+        <div id="box">
+
+        </div>
+        <div id="paymentBox">
+            <h1 id="cartheading">Cart Details</h1>
+            <hr id="line" />
+            <h3>Total Items : <span class="total_item_show">0</span></h3>
+            <h3>No of Items : <span class="number_item_show">0</span></h3>
+            <h3>Sub-Total : <span class="sub_total_show">0</span></h3>
+            <input type="text" placeholder=" Have a Promo Code ? ">
+            <button id="applybtn" onclick="promocode()">Apply</button>
+            <details>
+               <summary>Promocode Hint</summary>
+               <p>Enter <b>shubham30</b> for Thirty Percentage discount.</p>
+            </details>
+            <h3>Total Amout : <span class="total_amount">0</span></h3>
+            <button id="paybtn" onclick="payPaisha()">Proceed to Pay</button>
+            
+    
+        </div>
+    </div>
+</body>
+</html>
+<script src="./cart.js"></script>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens Page</title>
+    <style>
+        #nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: tomato;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            padding: 10px;
+        }
+        #nameblock {
+            padding-left: 20px;
+        }
+        #tabblock {
+            align-items: center;
+            padding-right: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+        }
+
+        #box {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 30px;
+            padding: 10px;
+            width: 90%;
+            margin: auto;
+            margin-top: 60px;
+        }
+        #itembox {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 20px;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin: auto;
+        }
+        h1,h4 {
+            text-align: center;
+        }
+        #btnstyle {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+            margin-bottom: 15px;
+            cursor: pointer;
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        /* media queries for average screen */
+        @media screen and (min-width: 700px) and (max-width: 1000px){
+            #box {
+            grid-template-columns: repeat(3,1fr);
+        }           
+        }
+
+        @media screen and (min-width: 600px) and (max-width: 699px){
+            #box {
+                grid-template-columns: repeat(2,1fr);   
+            }
+            
+            #nameblock {
+                padding-left: 5px;
+            }
+            #tabblock {
+                margin-right: 10px;
+            }
+            a {
+                font-size: 22px;
+                padding: 10px;
+            }
+        }
+
+        @media screen and (min-width: 450px) and (max-width: 599px){
+            #box {
+                grid-template-columns: repeat(2,1fr);   
+            }
+            #nameblock {
+                padding-left: 0px;
+            }
+            #tabblock {
+                margin-right: 15px;
+            }
+            a {
+                font-size: 16px;
+                border-radius: 10px;
+                padding: 8px;
+            }
+
+        }
+
+        /* media queries for small screen */
+        @media screen and (min-width: 320px) and (max-width: 449px){
+            #box {
+                grid-template-columns: repeat(1,1fr);
+                width: 98%;
+            }
+            #nameblock {
+                padding-left: 0px;
+                margin-left: 0px;
+            }
+            #tabblock {
+                margin-right: 6px;
+            }
+            a {
+                font-size: 12px;
+                border-radius: 10px;
+                padding: 4px;
+            }              
+        }
+
+        @media screen and (min-width: 0px) and (max-width: 319px){
+            #box {
+                grid-template-columns: repeat(1,1fr);
+                width: 96%;
+            }
+            #nameblock {
+                display: none;
+            }
+            #tabblock {
+                padding-right: 4px;
+            }
+            a {
+                font-size: 12px;
+                border-radius: 10px;
+                padding: 4px;
+            }              
+        }
+          
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="nameblock">
+            <a id="userName" href="./mens.html"></a>
+        </div>
+        <div id="tabblock">
+            <a href="./mens.html">Mens Page</a>
+            <a href="../Cart_Page/cart.html">Cart Page</a>
+            <a href="../../Signin/signin.html">LogOut</a>
+        </div>
+    </div>
+    <div id="box">
+
+    </div>
+</body>
+</html>
+<script src="./mens.js"></script>
