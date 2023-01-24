@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <style>
+        #parent {
+            width: 35%;
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #parent > div {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            height: fit-content;
+            margin-top: 0px;
+            text-align: left;
+        }
+
+        #parent > div > h2 {
+            padding: 2px 0px;
+            text-align: center;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 85%;
+            justify-content: center;
+        }
+
+        input[type="text"], [type="email"], input[type="number"], input[type="password"] {
+            margin-bottom: 12px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+         input[type="submit"] {
+            margin: 8px 0px;
+            padding: 10px 0px;
+            font-size: 22px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+         }
+
+         input[type="submit"]:hover {
+            background-color: #2563eb;
+         }
+
+        label {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        form > p {
+            font-size: 20px;
+            text-align: center;
+            padding-bottom: 6px;
+        }
+        
+        a {
+            font-size: 22px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        /* media queries for average screen */
+        @media screen and (min-width: 500px) and (max-width: 1000px){
+            #parent {
+                width: 60%;
+            }            
+        }
+
+        /* media queries for small screen */
+        @media screen and (min-width: 0px) and (max-width: 499px){
+            #parent {
+                width: 90%;
+            }            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <!-- <img src="https://sso.masaischool.com/brand_dark.svg" alt="masailogo"> -->
+        <div>
+            <h2>Sign Up</h2>
+            <form>
+                <label for="">Name</label>
+                <input id="name" type="text" placeholder="Enter Your Name Here" />
+                <label for="">Email</label>
+                <input id="email" type="email" placeholder="Enter Your Email Here" />
+                <label for="">Phone Number</label>
+                <input id="phone" type="number"  minlength="10" maxlength="10" placeholder="Enter Your Number Here"  />
+                <label for="">Password </label>
+                <input id="pass" type="password" placeholder="Enter Your Password Here" />
+                <input type="submit" value="SIGN UP" />
+                <P>Already have an account? <a href="./Signin/signin.html" target="_self">Sign In</a></P>
+              </form>
+        </div>
+        <p> © 2023 by Shubham kumar rai & Terms and Conditions</p>
+        
+    </div>
+</body>
+</html>
+
+<script src="./signup.js"></script>
